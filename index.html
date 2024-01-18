@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Lead</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h4>Create Lead</h4>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5g00000KgRnC" method="POST" onsubmit="formSubmitHandler()">
+    
+    <input type=hidden name="oid" value="00D5g00000KgRnC">
+    <input type=hidden name="retURL" value="https://mainakkarmakar.github.io/Web-to-Lead/thanks.html">
+    <input type=hidden name="Lead_Date__c" class="outPutdate">
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail"                                  -->
+    <!--  value="mainak.karmakar@accenture.com">                                  -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br>
+    
+    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true"/><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text"/><br>
+    
+    <!-- Lead Date:<span class="dateInput dateOnlyInput"><input  id="00N5g00000hktmC" name="00N5g00000hktmC" size="12" type="text" /></span><br> -->
+    <label for="Lead Date">Lead Date</label>
+    <input type="date" id="00N5g00000hktmC" name="00N5g00000hktmC" required="true" onchange="handelChange()" class="inputDate"/>
+    <input type="submit" name="submit" class="button">
+    
+    </form>
+    
+</body>
+</html>
